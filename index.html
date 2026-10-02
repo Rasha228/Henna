@@ -107,6 +107,12 @@
 
   .statcard{background:var(--blush);border-radius:14px;padding:16px 18px}
   .statgrid{background:rgba(255,255,255,.55);border-radius:8px;padding:12px 14px}
+  /* Keep the feature photo in its own grid cell so it can never cover pricing details. */
+  .pricing-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr) minmax(0,1.05fr);gap:20px;align-items:stretch}
+  .pricing-media{min-height:100%;z-index:0}
+  .pricing-layout .statcard{position:relative;z-index:1}
+  @media (max-width:1023px){.pricing-layout{grid-template-columns:1fr 1fr}.pricing-media{grid-column:1/-1;aspect-ratio:16/8}}
+  @media (max-width:639px){.pricing-layout{grid-template-columns:1fr}.pricing-media{grid-column:auto;aspect-ratio:16/10}}
 
   .tcard{background:var(--shell);border:1px solid var(--line);border-radius:4px;padding:26px 24px;
     transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
@@ -210,11 +216,11 @@
   "description": "Bridal, event and organic henna in the GTA, with products shipped across Canada.",
   "image": "https://hennabyayushi.com/assets/og.jpg",
   "url": "https://hennabyayushi.com/",
-  "email": "ayushishah1411@outlook.com",
+  "email": "hello@hennastudio.example",
   "areaServed": "Greater Toronto Area",
   "sameAs": [
-    "https://instagram.com/henna_byayushi",
-    "https://tiktok.com/@henna_byayushi"
+    "https://example.com/henna-studio-instagram",
+    "https://example.com/henna-studio-tiktok"
   ],
   "slogan": "Hands That Amaze"
 }
@@ -248,9 +254,9 @@
     </h1>
 
     <div class="mt-12 md:mt-14 flex flex-wrap justify-center gap-x-6 md:gap-x-14 gap-y-3 hero-in" style="animation-delay:.54s">
-      <a class="contactlink" href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener">IG: @henna_byayushi</a>
-      <a class="contactlink" href="mailto:ayushishah1411@outlook.com">Email: ayushishah1411@outlook.com</a>
-      <a class="contactlink" href="https://tiktok.com/@henna_byayushi" target="_blank" rel="noopener">TikTok: @henna_byayushi</a>
+      <span class="contactlink">IG: @hennastudio</span>
+      <span class="contactlink">Email: hello@hennastudio.example</span>
+      <span class="contactlink">TikTok: @hennastudio</span>
     </div>
   </header>
 </div>
@@ -279,16 +285,15 @@
   <div class="shell">
     <p class="eyebrow rv">By the numbers</p>
 
-    <div class="mt-8 grid lg:grid-cols-[1fr_1.25fr] gap-6 items-stretch">
-      <div class="ph rounded-[4px] aspect-[16/10] rv">
+    <div class="mt-8 pricing-layout">
+      <div class="ph rounded-[4px] pricing-media rv">
         <img src="assets/results.jpg" alt="Full bridal mehendi covering both hands and forearms, resting on a floral dupatta"
              style="object-position:center 45%"
              onerror="this.src='https://placehold.co/900x560/BBCAC1/1F2421?text=Results+that+speak'">
       </div>
 
-      <div class="grid sm:grid-cols-2 gap-5">
-        <!-- card 1 -->
-        <div class="statcard rv" style="transition-delay:.06s">
+      <!-- card 1 -->
+      <div class="statcard rv" style="transition-delay:.06s">
           <div class="flex justify-between gap-2 pb-3 mb-3 border-b border-white/60">
             <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">4</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Levels</p></div>
             <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">12</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Hands/hr</p></div>
@@ -303,10 +308,10 @@
             <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Up to elbow</p><p class="ser text-[1.25rem] leading-tight">$350</p></div>
           </div>
           <p class="text-[.72rem] leading-relaxed text-ink/75 mt-4">Party henna starts at $65/hour for simple designs. Minimum two hours, for groups of more than 10 people.</p>
-        </div>
+      </div>
 
-        <!-- card 2 -->
-        <div class="statcard rv" style="transition-delay:.14s">
+      <!-- card 2 -->
+      <div class="statcard rv" style="transition-delay:.14s">
           <div class="flex justify-between gap-2 pb-3 mb-3 border-b border-white/60">
             <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">20g</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Cone</p></div>
             <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">25g</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Cone</p></div>
@@ -320,7 +325,6 @@
             <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">2" above palms</p><p class="ser text-[1.25rem] leading-tight">$35</p></div>
             <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Half forearm</p><p class="ser text-[1.25rem] leading-tight">$50</p></div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -333,8 +337,8 @@
 
     <div class="mt-8 grid lg:grid-cols-[.85fr_1.15fr] gap-8 lg:gap-12 items-center">
       <div class="ph rounded-[4px] aspect-[4/4.6] rv">
-        <img src="assets/ayushi.jpg" alt="Ayushi, the artist behind Henna By Ayushi, sitting on a bench in the sun"
-             style="object-position:center 44%" loading="lazy">
+        <img src="assets/ayushi-portrait.png" alt="Ayushi, the artist behind Henna By Ayushi"
+             style="object-position:center 38%" loading="lazy">
       </div>
 
       <div class="rv" style="transition-delay:.08s">
@@ -510,8 +514,7 @@
   <div class="shell">
     <h2 class="scr text-center text-[clamp(2rem,4.4vw,3.2rem)] leading-none rv">
       More content
-      <a href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener"
-         class="ui font-ui text-[.8rem] tracking-[.06em] align-middle ml-2 border-b border-ink/40 hover:border-rose transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose">on my Instagram</a>
+      <span class="ui font-ui text-[.8rem] tracking-[.06em] align-middle ml-2">on social media</span>
     </h2>
   </div>
 
@@ -649,9 +652,9 @@
 <footer class="bg-ink text-white/60">
   <div class="shell py-5 flex flex-wrap items-center justify-between gap-4 text-[.68rem]">
     <div class="flex gap-6">
-      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="mailto:ayushishah1411@outlook.com">Email</a>
-      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener">Instagram</a>
-      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="https://tiktok.com/@henna_byayushi" target="_blank" rel="noopener">TikTok</a>
+      <span>IG: @hennastudio</span>
+      <span>Email: hello@hennastudio.example</span>
+      <span>TikTok: @hennastudio</span>
       <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="policies.html">Shipping &amp; returns</a>
     </div>
     <p>Henna By Ayushi · GTA appointments · Canadian product shipping</p>
@@ -726,7 +729,7 @@
     const subject = encodeURIComponent('Henna inquiry from ' + inquiryForm.elements.name.value);
     const body = encodeURIComponent('Hello Ayushi,\n\nI would like to inquire about henna services.\n\n' + details + '\n\nI understand that submitting this inquiry does not reserve my date.');
     inquiryStatus.textContent = 'Opening your email app with your inquiry. Ayushi will confirm availability before any date is reserved.';
-    window.location.href = 'mailto:ayushishah1411@outlook.com?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:hello@hennastudio.example?subject=' + subject + '&body=' + body;
   });
 </script>
 </body>

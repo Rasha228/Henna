@@ -463,8 +463,8 @@
   <div class="shell py-5 flex flex-wrap items-center justify-between gap-4 text-[.68rem]">
     <div class="flex gap-6">
       <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="index.html">Back to site</a>
-      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="mailto:ayushishah1411@outlook.com">Email</a>
-      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener">Instagram</a>
+      <span>Email: hello@hennastudio.example</span>
+      <span>IG: @hennastudio</span>
       <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="policies.html">Shipping &amp; returns</a>
     </div>
     <p>Henna By Ayushi · Ships within Canada · GTA pickup</p>
@@ -505,7 +505,7 @@
       All prices are in Canadian dollars. Send an inquiry and Ayushi will confirm availability, shipping or pickup, and payment before anything is charged.
     </p>
     <button type="button" class="pill w-full justify-center" id="cart-send">Send product inquiry</button>
-    <a class="pill pill-line w-full justify-center mt-3" href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener">DM on Instagram</a>
+    <span class="pill pill-line w-full justify-center mt-3" aria-disabled="true">Social link coming soon</span>
   </div>
 </aside>
 
@@ -621,7 +621,7 @@
       'Total: ' + money(total()), '',
       'Name:', 'Shipping address:', 'Phone:'
     ].join('\n');
-    window.location.href = 'mailto:ayushishah1411@outlook.com'
+    window.location.href = 'mailto:hello@hennastudio.example'
       + '?subject=' + encodeURIComponent('Henna product inquiry')
       + '&body=' + encodeURIComponent(body);
   });
