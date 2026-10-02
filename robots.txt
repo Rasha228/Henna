@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hennabyayushi.com/sitemap.xml

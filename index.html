@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Henna By Ayushi · Bridal, Event &amp; Organic Henna</title>
+<meta name="description" content="Elegant bridal, event and party mehendi in the GTA, plus fresh made-to-order organic henna cones shipped across Canada." />
+<link rel="canonical" href="https://hennabyayushi.com/">
+<meta name="theme-color" content="#F6F7F2">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Henna By Ayushi">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://hennabyayushi.com/">
+<meta property="og:title" content="Henna By Ayushi · Bridal, Event & Organic Henna">
+<meta property="og:description" content="Elegant bridal, event and party mehendi in the GTA, plus fresh made-to-order organic henna cones shipped across Canada.">
+<meta property="og:image" content="https://hennabyayushi.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Full bridal mehendi across both hands and forearms">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Henna By Ayushi · Bridal, Event & Organic Henna">
+<meta name="twitter:description" content="Elegant bridal, event and party mehendi in the GTA, plus fresh made-to-order organic henna cones shipped across Canada.">
+<meta name="twitter:image" content="https://hennabyayushi.com/assets/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Caveat:wght@400;500;600&family=Parisienne&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tailwind.css">
+<style>
+  :root{
+    --cream:#F6F7F2; --shell:#FFFFFF; --blush:#D2D9CB; --rose:#9CA88C;
+    --ink:#1F2421; --mute:#6D7762; --line:#E1E6DC;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --pad:clamp(20px,4vw,56px);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;overflow-x:hidden;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:Jost,Avenir,sans-serif;font-weight:400;line-height:1.7;
+    overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--blush);color:var(--ink)}
+
+  /* faint blueprint grid, like the reference ground */
+  .grid-bg{position:relative}
+  .grid-bg::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      linear-gradient(rgba(31,36,33,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(31,36,33,.045) 1px,transparent 1px);
+    background-size:76px 76px;
+  }
+  .grid-bg > *{position:relative;z-index:1}
+
+  .shell{max-width:1180px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+
+  .eyebrow{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--mute)}
+  .ser{font-family:"Playfair Display",Georgia,serif}
+  .scr{font-family:Parisienne,cursive}
+  .hnd{font-family:Caveat,cursive}
+
+  .navlink{font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);
+    text-decoration:none;padding-bottom:3px;border-bottom:1px solid rgba(31,36,33,.35);
+    transition:color .3s var(--ease),border-color .3s var(--ease),opacity .3s var(--ease)}
+  .navlink:hover{color:#000;border-color:var(--rose)}
+  .navlink:focus-visible{outline:2px solid var(--rose);outline-offset:5px}
+
+  .contactlink{font-size:.74rem;letter-spacing:.02em;color:var(--ink);text-decoration:none;
+    border-bottom:1px solid rgba(31,36,33,.4);padding-bottom:2px;
+    transition:color .3s var(--ease),border-color .3s var(--ease)}
+  .contactlink:hover{color:#000;border-color:var(--rose)}
+  .contactlink:focus-visible{outline:2px solid var(--rose);outline-offset:4px}
+
+  .ph{position:relative;overflow:hidden;background:#E1E6DC}
+  .ph img{display:block;width:100%;height:100%;object-fit:cover;
+    transition:transform 1s var(--ease)}
+  .ph:hover img{transform:scale(1.045)}
+
+  .chip{display:inline-flex;align-items:center;justify-content:center;text-align:center;
+    border:1px solid rgba(31,36,33,.28);border-radius:999px;
+    padding:.62rem 1rem;font-size:.55rem;letter-spacing:.12em;white-space:nowrap;text-transform:uppercase;
+    color:var(--ink);background:transparent;
+    transition:background-color .35s var(--ease),transform .35s var(--ease),border-color .35s var(--ease)}
+  .chip:hover{background:rgba(210,217,203,.55);border-color:var(--rose);transform:translateY(-2px)}
+
+  .numbadge{display:grid;place-items:center;width:30px;height:30px;border-radius:999px;
+    background:var(--blush);font-size:.72rem;font-weight:500;color:var(--ink);flex:none}
+
+  .pill{display:inline-flex;align-items:center;gap:.6rem;background:var(--blush);color:var(--ink);
+    border-radius:999px;padding:.85rem 2rem;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+    font-weight:500;text-decoration:none;box-shadow:0 8px 20px -12px rgba(31,36,33,.6);
+    transition:transform .4s var(--ease),background-color .35s var(--ease),box-shadow .4s var(--ease)}
+  .pill:hover{transform:translateY(-3px);background:var(--rose);box-shadow:0 14px 28px -14px rgba(31,36,33,.65)}
+  .pill:active{transform:translateY(-1px)}
+  .pill:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+
+  .pill-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);box-shadow:none}
+  .pill-ghost:hover{background:rgba(246,247,242,.14);border-color:#fff;box-shadow:none}
+  .pill-ghost:focus-visible{outline:2px solid var(--blush);outline-offset:4px}
+
+  .pill-line{background:transparent;color:var(--ink);border:1px solid rgba(31,36,33,.3);box-shadow:none}
+  .pill-line:hover{background:rgba(210,217,203,.5);border-color:var(--rose);box-shadow:none}
+
+  .statcard{background:var(--blush);border-radius:14px;padding:16px 18px}
+  .statgrid{background:rgba(255,255,255,.55);border-radius:8px;padding:12px 14px}
+
+  .tcard{background:var(--shell);border:1px solid var(--line);border-radius:4px;padding:26px 24px;
+    transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+  .tcard:hover{transform:translateY(-5px);box-shadow:0 16px 34px -22px rgba(31,36,33,.5)}
+
+  .igcard{background:var(--shell);border:1px solid var(--line);
+    transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+  .igcard:hover{transform:translateY(-5px);box-shadow:0 16px 34px -22px rgba(31,36,33,.5)}
+
+  /* inquiry form: an availability request, never an instant booking */
+  .inquiry{background:linear-gradient(120deg,#E7EDE4 0%,#F6F7F2 52%,#FFFFFF 100%)}
+  .inquiry-photo{min-height:100%;position:relative;overflow:hidden;background:#C8CDB0}
+  .inquiry-photo img{width:100%;height:100%;min-height:560px;object-fit:cover;display:block}
+  .inquiry-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(31,36,33,.48),rgba(31,36,33,.04) 58%)}
+  .inquiry-caption{position:absolute;left:clamp(24px,5vw,56px);right:24px;bottom:34px;color:#fff;z-index:1}
+  .inquiry-form{padding:clamp(34px,5vw,70px);background:rgba(255,255,255,.78)}
+  .field{display:grid;gap:7px}.field label{font-size:.72rem;letter-spacing:.04em;font-weight:600;color:var(--ink)}
+  .field input,.field select,.field textarea{width:100%;border:1px solid #B9C1B4;border-radius:4px;background:#fff;color:var(--ink);font:inherit;font-size:.9rem;line-height:1.4;padding:13px 14px;transition:border-color .25s var(--ease),box-shadow .25s var(--ease)}
+  .field textarea{min-height:114px;resize:vertical}.field input::placeholder,.field textarea::placeholder{color:#778073}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:#51634F;box-shadow:0 0 0 3px rgba(156,168,140,.3)}
+  .form-status{min-height:1.6em;font-size:.78rem;color:#3E4438;margin-top:14px}.form-status.error{color:#8A3131}
+  @media(max-width:1023px){.inquiry-photo img{min-height:350px}.inquiry-caption{bottom:28px}}
+
+  /* reel player */
+  .reel video{display:block;width:100%;height:100%;object-fit:cover;background:var(--line)}
+  .reel-btn{position:absolute;inset:0;z-index:3;display:grid;place-items:center;
+    background:transparent;border:0;padding:0;cursor:pointer;
+    transition:background-color .35s var(--ease)}
+  .reel-btn:hover{background:rgba(31,36,33,.16)}
+  .reel-btn:focus-visible{outline:2px solid var(--rose);outline-offset:-4px}
+  .knob{width:52px;height:52px;border-radius:999px;display:grid;place-items:center;
+    background:rgba(246,247,242,.92);color:var(--ink);
+    box-shadow:0 6px 18px -8px rgba(31,36,33,.7);
+    transition:transform .4s var(--ease),background-color .35s var(--ease),opacity .35s var(--ease)}
+  .reel-btn:hover .knob{transform:scale(1.08);background:#fff}
+  .reel-btn:active .knob{transform:scale(.96)}
+  .knob .i-pause{display:none}
+  .reel.playing .knob .i-play{display:none}
+  .reel.playing .knob .i-pause{display:block}
+  .reel.playing .knob{opacity:0}
+  .reel.playing .reel-btn:hover .knob,
+  .reel.playing .reel-btn:focus-visible .knob{opacity:1}
+  @media (hover:none){ .reel.playing .knob{opacity:.85} }
+
+  /* process cards · colour block by default, photo on hover */
+  .proc{position:relative;overflow:hidden;border-radius:4px;isolation:isolate;
+    aspect-ratio:3/3.7;display:flex;flex-direction:column;justify-content:flex-end;
+    padding:26px 24px;background:var(--tone);
+    transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+  .proc:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+  .proc-media{position:absolute;inset:0;z-index:0;opacity:0;
+    transition:opacity .6s var(--ease)}
+  .proc-media img{display:block;width:100%;height:100%;object-fit:cover;
+    transform:scale(1.08);transition:transform 1.4s var(--ease)}
+  .proc-media::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(31,36,33,.82),rgba(31,36,33,.2) 58%,rgba(31,36,33,.06))}
+  .proc-body{position:relative;z-index:1}
+  .proc-body *{transition:color .5s var(--ease)}
+  .proc-num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;
+    border:1px solid rgba(31,36,33,.35);font-size:.62rem;letter-spacing:.06em;
+    margin-bottom:14px;transition:border-color .5s var(--ease),color .5s var(--ease)}
+  .proc:hover,.proc:focus-visible{transform:translateY(-5px);
+    box-shadow:0 20px 40px -24px rgba(31,36,33,.6)}
+  .proc:hover .proc-media,.proc:focus-visible .proc-media,.proc.shown .proc-media{opacity:1}
+  .proc:hover .proc-media img,.proc:focus-visible .proc-media img,.proc.shown .proc-media img{transform:scale(1)}
+  .proc:hover .proc-body,.proc:focus-visible .proc-body,.proc.shown .proc-body,.proc.shown .proc-body *,
+  .proc:hover .proc-body *,.proc:focus-visible .proc-body *{color:#fff}
+  .proc:hover .proc-num,.proc:focus-visible .proc-num,.proc.shown .proc-num{border-color:rgba(255,255,255,.6)}
+  /* touch devices have no hover · show the photo outright */
+  @media (hover:none){
+    .proc-media{opacity:1}
+    .proc-media img{transform:scale(1)}
+    .proc-body,.proc-body *{color:#fff}
+    .proc-num{border-color:rgba(255,255,255,.6)}
+  }
+
+  /* logo watermark behind the closing band */
+  .footer-mark{position:absolute;inset:0;display:grid;place-items:center;
+    pointer-events:none;z-index:0;overflow:hidden}
+  .footer-mark img{width:min(760px,92vw);height:auto;display:block;
+    opacity:.2}
+
+  .rule{height:1px;background:var(--line)}
+
+  /* reveals */
+  .rv{opacity:0;transform:translateY(22px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .hero-in{opacity:0;transform:translateY(18px);animation:rise 1s var(--ease) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition-duration:.01ms!important}
+    .rv,.hero-in{opacity:1;transform:none}
+  }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Henna By Ayushi",
+  "description": "Bridal, event and organic henna in the GTA, with products shipped across Canada.",
+  "image": "https://hennabyayushi.com/assets/og.jpg",
+  "url": "https://hennabyayushi.com/",
+  "email": "ayushishah1411@outlook.com",
+  "areaServed": "Greater Toronto Area",
+  "sameAs": [
+    "https://instagram.com/henna_byayushi",
+    "https://tiktok.com/@henna_byayushi"
+  ],
+  "slogan": "Hands That Amaze"
+}
+</script>
+</head>
+<body>
+
+<!-- ══ TOP BAR ══════════════════════════════════════════════════ -->
+<div class="grid-bg">
+  <div class="shell pt-3 pb-1 flex justify-end">
+    <span class="eyebrow hero-in">Bridal &amp; Event Henna</span>
+  </div>
+
+  <!-- ══ NAV ════════════════════════════════════════════════════ -->
+  <nav class="shell pt-6 flex flex-wrap justify-center gap-x-6 sm:gap-x-9 md:gap-x-12 gap-y-3 hero-in" style="animation-delay:.06s" aria-label="Primary">
+    <a class="navlink" href="#about">About me</a>
+    <a class="navlink" href="#work">Recent work</a>
+    <a class="navlink" href="#pricing">Pricing</a>
+    <a class="navlink" href="cones.html">Shop cones</a>
+    <a class="navlink" href="#gallery">Gallery</a>
+    <a class="navlink" href="#contact">Inquire</a>
+  </nav>
+
+  <!-- ══ HERO ═══════════════════════════════════════════════════ -->
+  <header class="shell pt-12 md:pt-16 pb-10 text-center">
+    <h1 class="ser text-ink mx-auto max-w-[13ch] text-[clamp(1.95rem,6.6vw,5.4rem)] leading-[1.06] font-medium">
+      <span class="block hero-in" style="animation-delay:.12s">Let's <span class="scr text-rose font-normal">make</span></span>
+      <span class="block hero-in" style="animation-delay:.22s">your mehendi</span>
+      <span class="block hero-in" style="animation-delay:.32s"><span class="scr text-rose font-normal">the</span> one everyone</span>
+      <span class="block hero-in" style="animation-delay:.42s">remembers</span>
+    </h1>
+
+    <div class="mt-12 md:mt-14 flex flex-wrap justify-center gap-x-6 md:gap-x-14 gap-y-3 hero-in" style="animation-delay:.54s">
+      <a class="contactlink" href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener">IG: @henna_byayushi</a>
+      <a class="contactlink" href="mailto:ayushishah1411@outlook.com">Email: ayushishah1411@outlook.com</a>
+      <a class="contactlink" href="https://tiktok.com/@henna_byayushi" target="_blank" rel="noopener">TikTok: @henna_byayushi</a>
+    </div>
+  </header>
+</div>
+
+<!-- ══ HERO IMAGE BAND ══════════════════════════════════════════ -->
+<section class="grid grid-cols-3 hero-in" style="animation-delay:.62s" aria-label="Featured henna work">
+  <div class="ph aspect-[4/3.9]">
+    <img src="assets/bridal-hands.jpg" alt="Detailed bridal mehendi on both hands, held up against white hydrangeas"
+         style="object-position:center 42%"
+         onerror="this.src='https://placehold.co/860x840/E1E6DC/1F2421?text=Bridal+Hands'">
+  </div>
+  <div class="ph aspect-[4/3.9]">
+    <img src="assets/cone-work.jpg" alt="A hand holding a fan of Henna By Ayushi organic henna cones"
+         style="object-position:center 45%"
+         onerror="this.src='https://placehold.co/860x840/D2D9CB/1F2421?text=Cone+Work'">
+  </div>
+  <div class="ph aspect-[4/3.9]">
+    <img src="assets/finished-stain.jpg" alt="Finished henna stain running from fingertips to forearm on both arms"
+         style="object-position:center 38%"
+         onerror="this.src='https://placehold.co/860x840/C8CDB0/1F2421?text=Finished+Stain'">
+  </div>
+</section>
+
+<!-- ══ BY THE NUMBERS ═══════════════════════════════════════════ -->
+<section id="pricing" class="grid-bg py-16 md:py-24">
+  <div class="shell">
+    <p class="eyebrow rv">By the numbers</p>
+
+    <div class="mt-8 grid lg:grid-cols-[1fr_1.25fr] gap-6 items-stretch">
+      <div class="ph rounded-[4px] aspect-[16/10] rv">
+        <img src="assets/results.jpg" alt="Full bridal mehendi covering both hands and forearms, resting on a floral dupatta"
+             style="object-position:center 45%"
+             onerror="this.src='https://placehold.co/900x560/BBCAC1/1F2421?text=Results+that+speak'">
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <!-- card 1 -->
+        <div class="statcard rv" style="transition-delay:.06s">
+          <div class="flex justify-between gap-2 pb-3 mb-3 border-b border-white/60">
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">4</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Levels</p></div>
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">12</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Hands/hr</p></div>
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">GTA</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Service area</p></div>
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">$1</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Per km</p></div>
+          </div>
+          <p class="text-[.55rem] tracking-[.18em] uppercase text-ink/75 mb-2">Bridal coverage</p>
+          <div class="statgrid grid grid-cols-2 gap-y-3 gap-x-4">
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Up to wrists</p><p class="ser text-[1.25rem] leading-tight">$200</p></div>
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Bangle length</p><p class="ser text-[1.25rem] leading-tight">$250</p></div>
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Half forearm</p><p class="ser text-[1.25rem] leading-tight">$300</p></div>
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Up to elbow</p><p class="ser text-[1.25rem] leading-tight">$350</p></div>
+          </div>
+          <p class="text-[.72rem] leading-relaxed text-ink/75 mt-4">Party henna starts at $65/hour for simple designs. Minimum two hours, for groups of more than 10 people.</p>
+        </div>
+
+        <!-- card 2 -->
+        <div class="statcard rv" style="transition-delay:.14s">
+          <div class="flex justify-between gap-2 pb-3 mb-3 border-b border-white/60">
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">20g</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Cone</p></div>
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">25g</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Cone</p></div>
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">250g</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Bulk</p></div>
+            <div class="text-center flex-1"><p class="ser text-[1.05rem] leading-none">500g</p><p class="text-[.5rem] tracking-[.12em] uppercase text-ink/70 mt-1">Bulk</p></div>
+          </div>
+          <p class="text-[.55rem] tracking-[.18em] uppercase text-ink/75 mb-2">Non-bridal, per side</p>
+          <div class="statgrid grid grid-cols-2 gap-y-3 gap-x-4">
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Simple back</p><p class="ser text-[1.25rem] leading-tight">$10</p></div>
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Full palms</p><p class="ser text-[1.25rem] leading-tight">$25</p></div>
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">2" above palms</p><p class="ser text-[1.25rem] leading-tight">$35</p></div>
+            <div><p class="text-[.58rem] tracking-[.12em] uppercase text-ink/70">Half forearm</p><p class="ser text-[1.25rem] leading-tight">$50</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ════════════════════════════════════════════════════ -->
+<section id="about" class="grid-bg pb-16 md:pb-24">
+  <div class="shell">
+    <p class="eyebrow rv">Behind the cone… it's me</p>
+
+    <div class="mt-8 grid lg:grid-cols-[.85fr_1.15fr] gap-8 lg:gap-12 items-center">
+      <div class="ph rounded-[4px] aspect-[4/4.6] rv">
+        <img src="assets/ayushi.jpg" alt="Ayushi, the artist behind Henna By Ayushi, sitting on a bench in the sun"
+             style="object-position:center 44%" loading="lazy">
+      </div>
+
+      <div class="rv" style="transition-delay:.08s">
+        <p class="hnd text-[clamp(1.3rem,2.3vw,1.85rem)] leading-[1.5] text-ink">
+          Hi, I'm Ayushi · the artist behind Henna By Ayushi. What began as a love for the art of mehendi has
+          grown into a passion for creating meaningful bridal designs that become part of a bride's most
+          cherished memories. I specialise in elegant, detailed bridal mehendi, thoughtfully designed around
+          each bride's personal style, story and vision. It is not only beautiful henna · it is an opportunity
+          to make you feel confident, celebrated and truly yourself.
+        </p>
+
+        <div class="mt-9 flex flex-wrap md:flex-nowrap gap-3">
+          <span class="chip">Designed around your story</span>
+          <span class="chip">Quietly luxurious aesthetic</span>
+          <span class="chip">First message to final stain</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROCESS ══════════════════════════════════════════════════ -->
+<section id="process" class="grid-bg pb-16 scroll-mt-8">
+  <div class="shell">
+    <div class="flex flex-wrap items-end justify-between gap-6 rv">
+      <div>
+        <p class="eyebrow">How it's made</p>
+        <h2 class="ser mt-5 text-[clamp(1.9rem,3.6vw,2.8rem)] leading-tight">
+          From leaf to cone
+        </h2>
+      </div>
+      <p class="text-sm text-mute max-w-[40ch]">
+        Every cone starts as loose henna and ends sealed and labelled, ready for fine detail.
+        Hover or tap a step to see it.
+      </p>
+    </div>
+
+    <div class="mt-9 grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <article class="proc rv" tabindex="0" style="--tone:#D2D9CB;">
+        <div class="proc-media">
+          <img src="assets/process-1.jpg" alt="A bowl of freshly mixed organic henna paste beside dried henna leaves" loading="lazy">
+        </div>
+        <div class="proc-body">
+          <span class="proc-num">01</span>
+          <h3 class="ser text-[1.6rem] leading-tight">The paste</h3>
+          <p class="text-[.82rem] leading-relaxed mt-2 opacity-80">Organic henna, sifted and mixed until it is smooth enough to flow from a fine tip.</p>
+        </div>
+      </article>
+
+      <article class="proc rv" tabindex="0" style="--tone:#BBCAC1; transition-delay:.8s;">
+        <div class="proc-media">
+          <img src="assets/process-2.jpg" alt="Henna paste being piped by hand into a clear cone" loading="lazy">
+        </div>
+        <div class="proc-body">
+          <span class="proc-num">02</span>
+          <h3 class="ser text-[1.6rem] leading-tight">The cones</h3>
+          <p class="text-[.82rem] leading-relaxed mt-2 opacity-80">Every cone is rolled and filled by hand, so the paste is ready to draw the moment it is opened.</p>
+        </div>
+      </article>
+
+      <article class="proc rv" tabindex="0" style="--tone:#C8CDB0; transition-delay:.16s;">
+        <div class="proc-media">
+          <img src="assets/cones-leaves.jpg" alt="Finished Henna By Ayushi cones held against green leaves" loading="lazy">
+        </div>
+        <div class="proc-body">
+          <span class="proc-num">03</span>
+          <h3 class="ser text-[1.6rem] leading-tight">Ready to go</h3>
+          <p class="text-[.82rem] leading-relaxed mt-2 opacity-80">Sealed, labelled and packed · made for beautiful detail and a rich, lasting stain.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RECENT WORK ══════════════════════════════════════════════ -->
+<section id="work" class="grid-bg pb-10">
+  <div class="shell">
+    <p class="eyebrow rv">My recent work</p>
+
+    <!-- 1 Organic cones -->
+    <div class="mt-9 flex flex-wrap items-center justify-between gap-4 rv">
+      <div class="flex items-center gap-3">
+        <span class="numbadge">1</span>
+        <h2 id="cones" class="ser text-[1.15rem] scroll-mt-24">Organic Cones</h2>
+      </div>
+      <a class="pill pill-line" href="cones.html">
+        Shop cones &amp; bulk paste <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <figure class="rv">
+        <div class="ph rounded-[4px] aspect-[3/3.7]"><img src="assets/cones-handful.jpg" alt="A handful of Henna By Ayushi organic henna cones" loading="lazy"></div>
+        <figcaption class="text-[.7rem] text-mute mt-3">20 g cones · $4 each</figcaption>
+      </figure>
+      <figure class="rv" style="transition-delay:.08s">
+        <div class="ph rounded-[4px] aspect-[3/3.7]"><img src="assets/cones-tray.jpg" alt="A tray of henna cones laid out at a mehendi celebration" style="object-position:center 62%" loading="lazy"></div>
+        <figcaption class="text-[.7rem] text-mute mt-3">Cone bundles · from $11</figcaption>
+      </figure>
+      <figure class="rv" style="transition-delay:.16s">
+        <div class="ph rounded-[4px] aspect-[3/3.7]"><img src="assets/cones-bulk.jpg" alt="A large piping bag of bulk organic henna paste" style="object-position:center 40%" loading="lazy"></div>
+        <figcaption class="text-[.7rem] text-mute mt-3">Bulk paste · 250 g / 500 g</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PHOTOGRAPHY ══════════════════════════════════════════════ -->
+<section id="gallery" class="grid-bg pt-20 pb-16 md:pb-24">
+  <div class="shell">
+    <h2 class="scr text-center text-[clamp(2.6rem,6vw,4.4rem)] leading-none rv">Photography</h2>
+
+    <div class="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 [grid-auto-flow:dense]">
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0s">
+        <img src="assets/g-bandhani-palms.jpg" alt="Palm mehendi against a green bandhani dupatta" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.05s">
+        <img src="assets/g-lattice-arms.jpg" alt="Full bridal lattice work covering both forearms" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/2] col-span-2 rv" style="transition-delay:0.1s">
+        <img src="assets/g-rose-hand.jpg" alt="A single henna rose across the back of the hand" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.15000000000000002s">
+        <img src="assets/g-crown-cuffs.jpg" alt="Matching crown cuff designs on both hands" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.2s">
+        <img src="assets/g-bride-earring.jpg" alt="A bride fastening her earring, henna on her hand" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/2] col-span-2 rv" style="transition-delay:0.25s">
+        <img src="assets/g-grey-couch.jpg" alt="Two hands resting after a full mandala set" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0s">
+        <img src="assets/g-wood-bows.jpg" alt="Back-of-hand mandalas with painted fingertips" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.05s">
+        <img src="assets/g-lotus-dark.jpg" alt="Deep lotus mandalas on both hands" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.1s">
+        <img src="assets/g-checkered.jpg" alt="Lotus medallions with banded fingers" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.15000000000000002s">
+        <img src="assets/g-rose-cuffs.jpg" alt="Rose and lattice cuffs running up both forearms" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.2s">
+        <img src="assets/g-embroidered-cloth.jpg" alt="Bridal hands resting on embroidered cloth" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.25s">
+        <img src="assets/finished-stain.jpg" alt="Elbow-length designs photographed outdoors" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0s">
+        <img src="assets/g-concrete-story.jpg" alt="Close detail of fingertip and palm linework" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/2] col-span-2 rv" style="transition-delay:0.05s">
+        <img src="assets/results.jpg" alt="Full bridal set on a floral dupatta" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.1s">
+        <img src="assets/g-gravel-ring.jpg" alt="A deep stain developing on the back of the hand" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.15000000000000002s">
+        <img src="assets/g-beach-lehenga.jpg" alt="A bride in red at the water's edge" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.2s">
+        <img src="assets/g-simple-pair.jpg" alt="Light, simple designs for guests" loading="lazy">
+      </figure>
+      <figure class="ph rounded-[3px] aspect-[3/4] rv" style="transition-delay:0.25s">
+        <img src="assets/g-gold-chain.jpg" alt="Delicate scalloped work with a gold chain" loading="lazy">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MORE CONTENT ═════════════════════════════════════════════ -->
+<section class="bg-shell py-16 md:py-24">
+  <div class="shell">
+    <h2 class="scr text-center text-[clamp(2rem,4.4vw,3.2rem)] leading-none rv">
+      More content
+      <a href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener"
+         class="ui font-ui text-[.8rem] tracking-[.06em] align-middle ml-2 border-b border-ink/40 hover:border-rose transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose">on my Instagram</a>
+    </h2>
+  </div>
+
+  <div class="mt-10 px-3 md:px-4">
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 md:gap-4">
+      <article class="igcard rv">
+        <div class="ph aspect-[4/5] reel">
+          <video src="assets/reel-1.mp4" poster="assets/reel-1.jpg"
+                 loop muted playsinline preload="none" aria-label="A palm design being outlined in henna"></video>
+          <button type="button" class="reel-btn" data-label="Palm design, start to finish" aria-pressed="false" aria-label="Play Palm design, start to finish">
+            <span class="knob" aria-hidden="true">
+              <svg class="i-play" width="17" height="19" viewBox="0 0 17 19" fill="currentColor"><path d="M16 8.63a1 1 0 0 1 0 1.74L2 18.5a1 1 0 0 1-1.5-.87V1.37A1 1 0 0 1 2 .5l14 8.13Z"/></svg>
+              <svg class="i-pause" width="15" height="17" viewBox="0 0 15 17" fill="currentColor"><rect x="0" y="0" width="5" height="17" rx="1.4"/><rect x="10" y="0" width="5" height="17" rx="1.4"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="px-4 py-3 flex items-center justify-between">
+          <span class="text-[.68rem] text-mute">0:27</span>
+          <span class="text-[.6rem] tracking-[.16em] uppercase text-mute">Reel</span>
+        </div>
+        <p class="px-4 pb-4 text-[.78rem] text-mute">Palm design, start to finish</p>
+      </article>
+
+      <article class="igcard rv" style="transition-delay:.8s">
+        <div class="ph aspect-[4/5] reel">
+          <video src="assets/reel-2.mp4" poster="assets/reel-2.jpg"
+                 loop muted playsinline preload="none" aria-label="Two hennaed hands held up among white hydrangeas"></video>
+          <button type="button" class="reel-btn" data-label="Romanticise every moment" aria-pressed="false" aria-label="Play Romanticise every moment">
+            <span class="knob" aria-hidden="true">
+              <svg class="i-play" width="17" height="19" viewBox="0 0 17 19" fill="currentColor"><path d="M16 8.63a1 1 0 0 1 0 1.74L2 18.5a1 1 0 0 1-1.5-.87V1.37A1 1 0 0 1 2 .5l14 8.13Z"/></svg>
+              <svg class="i-pause" width="15" height="17" viewBox="0 0 15 17" fill="currentColor"><rect x="0" y="0" width="5" height="17" rx="1.4"/><rect x="10" y="0" width="5" height="17" rx="1.4"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="px-4 py-3 flex items-center justify-between">
+          <span class="text-[.68rem] text-mute">0:16</span>
+          <span class="text-[.6rem] tracking-[.16em] uppercase text-mute">Reel</span>
+        </div>
+        <p class="px-4 pb-4 text-[.78rem] text-mute">Romanticise every moment</p>
+      </article>
+
+      <article class="igcard rv" style="transition-delay:.16s">
+        <div class="ph aspect-[4/5] reel">
+          <video src="assets/reel-3.mp4" poster="assets/reel-3.jpg"
+                 loop muted playsinline preload="none" aria-label="A finished soft-glam henna design on the hand"></video>
+          <button type="button" class="reel-btn" data-label="Soft glam henna era" aria-pressed="false" aria-label="Play Soft glam henna era">
+            <span class="knob" aria-hidden="true">
+              <svg class="i-play" width="17" height="19" viewBox="0 0 17 19" fill="currentColor"><path d="M16 8.63a1 1 0 0 1 0 1.74L2 18.5a1 1 0 0 1-1.5-.87V1.37A1 1 0 0 1 2 .5l14 8.13Z"/></svg>
+              <svg class="i-pause" width="15" height="17" viewBox="0 0 15 17" fill="currentColor"><rect x="0" y="0" width="5" height="17" rx="1.4"/><rect x="10" y="0" width="5" height="17" rx="1.4"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="px-4 py-3 flex items-center justify-between">
+          <span class="text-[.68rem] text-mute">0:15</span>
+          <span class="text-[.6rem] tracking-[.16em] uppercase text-mute">Reel</span>
+        </div>
+        <p class="px-4 pb-4 text-[.78rem] text-mute">Soft glam henna era</p>
+      </article>
+
+      <article class="igcard rv" style="transition-delay:.24s">
+        <div class="ph aspect-[4/5] reel">
+          <video src="assets/reel-4.mp4" poster="assets/reel-4.jpg"
+                 loop muted playsinline preload="none" aria-label="A bridal design being filled in on the back of the hand"></video>
+          <button type="button" class="reel-btn" data-label="POV: your bridal henna" aria-pressed="false" aria-label="Play POV: your bridal henna">
+            <span class="knob" aria-hidden="true">
+              <svg class="i-play" width="17" height="19" viewBox="0 0 17 19" fill="currentColor"><path d="M16 8.63a1 1 0 0 1 0 1.74L2 18.5a1 1 0 0 1-1.5-.87V1.37A1 1 0 0 1 2 .5l14 8.13Z"/></svg>
+              <svg class="i-pause" width="15" height="17" viewBox="0 0 15 17" fill="currentColor"><rect x="0" y="0" width="5" height="17" rx="1.4"/><rect x="10" y="0" width="5" height="17" rx="1.4"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="px-4 py-3 flex items-center justify-between">
+          <span class="text-[.68rem] text-mute">0:35</span>
+          <span class="text-[.6rem] tracking-[.16em] uppercase text-mute">Reel</span>
+        </div>
+        <p class="px-4 pb-4 text-[.78rem] text-mute">POV: your bridal henna</p>
+      </article>
+
+      <article class="igcard rv" style="transition-delay:.32s">
+        <div class="ph aspect-[4/5] reel">
+          <video src="assets/reel-5.mp4" poster="assets/reel-5.jpg"
+                 loop muted playsinline preload="none" aria-label="A bridal design taking shape on the back of the hand"></video>
+          <button type="button" class="reel-btn" data-label="For my 2026 GTA brides" aria-pressed="false" aria-label="Play For my 2026 GTA brides">
+            <span class="knob" aria-hidden="true">
+              <svg class="i-play" width="17" height="19" viewBox="0 0 17 19" fill="currentColor"><path d="M16 8.63a1 1 0 0 1 0 1.74L2 18.5a1 1 0 0 1-1.5-.87V1.37A1 1 0 0 1 2 .5l14 8.13Z"/></svg>
+              <svg class="i-pause" width="15" height="17" viewBox="0 0 15 17" fill="currentColor"><rect x="0" y="0" width="5" height="17" rx="1.4"/><rect x="10" y="0" width="5" height="17" rx="1.4"/></svg>
+            </span>
+          </button>
+        </div>
+        <div class="px-4 py-3 flex items-center justify-between">
+          <span class="text-[.68rem] text-mute">0:12</span>
+          <span class="text-[.6rem] tracking-[.16em] uppercase text-mute">Reel</span>
+        </div>
+        <p class="px-4 pb-4 text-[.78rem] text-mute">For my 2026 GTA brides</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ INQUIRY ══════════════════════════════════════════════════ -->
+<section id="contact" class="inquiry scroll-mt-8">
+  <div class="grid lg:grid-cols-[.76fr_1.24fr]">
+    <div class="inquiry-photo rv">
+      <img src="assets/bridal-hands.jpg" alt="Detailed bridal mehendi on both hands" loading="lazy">
+      <div class="inquiry-caption">
+        <p class="eyebrow !text-white/80">GTA appointments</p>
+        <p class="ser text-[clamp(1.5rem,3vw,2.6rem)] leading-tight mt-3">Your celebration, thoughtfully considered.</p>
+      </div>
+    </div>
+    <div class="inquiry-form">
+      <p class="eyebrow rv">Henna inquiry</p>
+      <h2 class="ser text-[clamp(2.2rem,5vw,4.6rem)] leading-[1.04] mt-4 max-w-[12ch] rv" style="transition-delay:.05s">Tell me about your event</h2>
+      <p class="text-[.94rem] text-mute mt-5 max-w-[58ch] rv" style="transition-delay:.1s">Send an inquiry and Ayushi will confirm availability before your date is reserved. Party henna is available for groups of more than 10 people and has a two-hour minimum.</p>
+
+      <form id="inquiry-form" class="mt-9 grid sm:grid-cols-2 gap-x-5 gap-y-5 rv" style="transition-delay:.15s" novalidate>
+        <div class="field"><label for="inquiry-name">Name <span aria-hidden="true">*</span></label><input id="inquiry-name" name="name" autocomplete="name" required placeholder="Full name"></div>
+        <div class="field"><label for="inquiry-email">Email <span aria-hidden="true">*</span></label><input id="inquiry-email" name="email" autocomplete="email" type="email" required placeholder="you@example.com"></div>
+        <div class="field"><label for="inquiry-phone">Phone number <span aria-hidden="true">*</span></label><input id="inquiry-phone" name="phone" autocomplete="tel" type="tel" required placeholder="(000) 000-0000"></div>
+        <div class="field"><label for="inquiry-type">Type of event <span aria-hidden="true">*</span></label><select id="inquiry-type" name="event type" required><option value="" selected disabled>Select an option</option><option>Bridal henna</option><option>Non-bridal henna</option><option>Party henna</option><option>Baby shower</option><option>Other event</option></select></div>
+        <div class="field"><label for="inquiry-date">Event date <span aria-hidden="true">*</span></label><input id="inquiry-date" name="event date" type="date" required></div>
+        <div class="field"><label for="inquiry-time">Preferred time <span aria-hidden="true">*</span></label><input id="inquiry-time" name="preferred time" type="time" required></div>
+        <div class="field"><label for="inquiry-location">Event location <span aria-hidden="true">*</span></label><input id="inquiry-location" name="event location" required placeholder="City, venue or address"></div>
+        <div class="field"><label for="inquiry-guests">Number of people <span aria-hidden="true">*</span></label><input id="inquiry-guests" name="number of people" type="number" min="1" required placeholder="e.g. 25"></div>
+        <div class="field sm:col-span-2"><label for="inquiry-details">Additional details</label><textarea id="inquiry-details" name="additional details" placeholder="Tell me about your event, design ideas or any special requests."></textarea></div>
+        <div class="sm:col-span-2 mt-2 flex flex-col sm:flex-row sm:items-center gap-5 sm:justify-between">
+          <button type="submit" class="pill w-fit border-0 cursor-pointer">Send inquiry <span aria-hidden="true">→</span></button>
+          <p class="text-[.78rem] text-mute max-w-[42ch]">A $50 non-refundable retainer is requested only after availability is confirmed. Sending this form does not reserve your date.</p>
+        </div>
+        <p id="inquiry-status" class="form-status sm:col-span-2" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ BOTTOM BAR ═══════════════════════════════════════════════ -->
+<footer class="bg-ink text-white/60">
+  <div class="shell py-5 flex flex-wrap items-center justify-between gap-4 text-[.68rem]">
+    <div class="flex gap-6">
+      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="mailto:ayushishah1411@outlook.com">Email</a>
+      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="https://instagram.com/henna_byayushi" target="_blank" rel="noopener">Instagram</a>
+      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="https://tiktok.com/@henna_byayushi" target="_blank" rel="noopener">TikTok</a>
+      <a class="hover:text-white transition-colors duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blush" href="policies.html">Shipping &amp; returns</a>
+    </div>
+    <p>Henna By Ayushi · GTA appointments · Canadian product shipping</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -10% 0px', threshold:.1});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // process cards · hover reveals the photo; tap does the same on touch
+  document.querySelectorAll('.proc').forEach(card => {
+    card.addEventListener('click', () => card.classList.toggle('shown'));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.classList.toggle('shown'); }
+    });
+  });
+
+  // reel players · one at a time, sound on when the viewer presses play
+  const reels = [...document.querySelectorAll('.reel')];
+  reels.forEach(wrap => {
+    const v = wrap.querySelector('video');
+    const btn = wrap.querySelector('.reel-btn');
+    const label = btn.dataset.label;
+
+    btn.addEventListener('click', () => {
+      if (v.paused) {
+        reels.forEach(o => { if (o !== wrap) o.querySelector('video').pause(); });
+        v.muted = false;
+        v.play().catch(() => { v.muted = true; v.play().catch(() => {}); });
+      } else {
+        v.pause();
+      }
+    });
+
+    v.addEventListener('play', () => {
+      wrap.classList.add('playing');
+      btn.setAttribute('aria-pressed', 'true');
+      btn.setAttribute('aria-label', 'Pause ' + label);
+    });
+    v.addEventListener('pause', () => {
+      wrap.classList.remove('playing');
+      btn.setAttribute('aria-pressed', 'false');
+      btn.setAttribute('aria-label', 'Play ' + label);
+    });
+  });
+
+  // pause a reel once it scrolls out of view
+  const vio = new IntersectionObserver((es) => {
+    es.forEach(e => { if (!e.isIntersecting) e.target.querySelector('video').pause(); });
+  }, {threshold:.25});
+  reels.forEach(r => vio.observe(r));
+
+  // This is intentionally an inquiry, not an appointment confirmation.
+  // A form service or Shopify app can replace this mail client handoff at launch.
+  const inquiryForm = document.getElementById('inquiry-form');
+  const inquiryStatus = document.getElementById('inquiry-status');
+  inquiryForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!inquiryForm.checkValidity()) {
+      inquiryStatus.textContent = 'Please complete the required fields before sending your inquiry.';
+      inquiryStatus.classList.add('error');
+      inquiryForm.reportValidity();
+      return;
+    }
+    inquiryStatus.classList.remove('error');
+    const details = [...new FormData(inquiryForm).entries()]
+      .map(([key, value]) => key.replace(/\b\w/g, c => c.toUpperCase()) + ': ' + value)
+      .join('\n');
+    const subject = encodeURIComponent('Henna inquiry from ' + inquiryForm.elements.name.value);
+    const body = encodeURIComponent('Hello Ayushi,\n\nI would like to inquire about henna services.\n\n' + details + '\n\nI understand that submitting this inquiry does not reserve my date.');
+    inquiryStatus.textContent = 'Opening your email app with your inquiry. Ayushi will confirm availability before any date is reserved.';
+    window.location.href = 'mailto:ayushishah1411@outlook.com?subject=' + subject + '&body=' + body;
+  });
+</script>
+</body>
+</html>

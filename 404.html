@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page not found — Henna By Ayushi</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F7F2">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Parisienne&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--cream:#F6F7F2;--blush:#D2D9CB;--rose:#9CA88C;--ink:#1F2421;--mute:#6D7762;
+    --ease:cubic-bezier(.22,1,.36,1)}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;padding:32px;
+    background:var(--cream);color:var(--ink);
+    font-family:Jost,Avenir,sans-serif;line-height:1.7;text-align:center;
+    background-image:
+      linear-gradient(rgba(31,36,33,.045) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(31,36,33,.045) 1px,transparent 1px);
+    background-size:76px 76px}
+  .eyebrow{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:var(--mute)}
+  h1{font-family:Parisienne,cursive;font-weight:400;
+     font-size:clamp(2.6rem,8vw,4.4rem);line-height:1;margin:.4em 0 .2em}
+  p{max-width:44ch;margin:0 auto;color:var(--mute);font-size:.92rem}
+  .links{margin-top:34px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  a.pill{display:inline-flex;align-items:center;background:var(--blush);color:var(--ink);
+    border-radius:999px;padding:.85rem 2rem;font-size:.66rem;letter-spacing:.2em;
+    text-transform:uppercase;font-weight:500;text-decoration:none;
+    box-shadow:0 8px 20px -12px rgba(31,36,33,.6);
+    transition:transform .4s var(--ease),background-color .35s var(--ease)}
+  a.pill:hover{transform:translateY(-3px);background:var(--rose)}
+  a.pill.line{background:transparent;border:1px solid rgba(31,36,33,.3);box-shadow:none}
+  a.pill.line:hover{background:rgba(210,217,203,.5)}
+  a.pill:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+</style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Page not found</p>
+    <h1>Nothing here</h1>
+    <p>This page has moved or never existed. The henna, happily, is still where you left it.</p>
+    <div class="links">
+      <a class="pill" href="/">Back to the site</a>
+      <a class="pill line" href="/cones.html">Shop cones</a>
+    </div>
+  </main>
+</body>
+</html>
